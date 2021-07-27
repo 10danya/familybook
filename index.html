@@ -1,23 +1,55 @@
-<html>
+<<html>
     <head>
-        <title> Console </title>
+    <title>Family Book</title>
     </head>
-    <body>
-        <p>Visual Studio Code is a code editor. You can debug, and run live tests</p>
-        <p>The console screen is very helpful.you can print info or variables on it.</p>
-    </body>
+    <body style="background-image: url(https://gifimage.net/wp-content/uploads/2017/07/gif-backgrounds-7.gif);">
+        
+    <center>
+        
+        
+    <img id="family_img" style= "height:450px ; width: 360px; ;" src="https://cdn11.bigcommerce.com/s-4pg4qzd524/images/stencil/original/products/15505/32793/STCL668_Family_Word_Stencil_Classic_Embellished_pi__04073.1519672139.jpg?c=2">
+    <br>
+    <br> 
+    <h1 id="family_text" style="font-size: 50px; color: white;"> Family Book</h1>
+    <button style="border-radius: 15px; background-color: mediumblue; height: 30px; width: 90px; font-size: 20px; color: white; z-index: 30;" 
+    id="button1" onclick="next()"> Next</button>
+    
+    </center>
+    
+    
     <script>
-        var title="My first console project";
-        console.log(title);
-        var first_word="Visual-studios";
-        var second_word="&Javascript";
-        var combine= first_word.concat(second_word);
-        console.log(combine);
-        var num_1="50";
-        var num_2="100";
-        var multiply = num_1 * num_2;
-        console.log(multiply);
-        var subtract = num_2 - num_1;
-        console.log(subtract);
+    var img_array=["https://lh3.googleusercontent.com/cfvlW-kaWhPZ5zAJU9EMT998ofrKR_9-NtltDD6_E3RpbCRqU4asGpunHTI8GNrhe1ShPPTxY0fMpAmNMR388H_luq2rEJ7XnM2ctLZSGPV2ZIBoDlK3vWyECaGSemiYewoemtAe0pLZLeMv7RPN-deEmNaOD2Dwmsam5ZU_t5aNog1owAnrAujOEYp4KMGsZjLU2BrVQ4t-0g09ZI164V0Nq4oplAqmCc1Igjb6TNYLIn8Of2ydDhWiCMaZNQw4C9Kz72xNnmNEAn6RlejHWmjeSioySPOAQULOEoafRlKZVFHzXq0emv7LScvNmy8ZyN7iLWACxYf3MaKgq5zLz2C_IwWNhpRW3wkAq_r01lRvEhQHkbW9KNqYQddyFZui84T-S6EFYAC0tpVZWrXqAOl8951mWfMKT2RyhaxFWes_OBHMhzcKyEHFpDHH4hkvKkUF9dQRiJSBqpoUjDnG978g9i2roZ01pF3CltQS6bvhCWY0H3uEeu6sNFRtqqz1aRUgpj0amh_qsA0qlMDN681kdZg3Q5qb_F6Miy678BZ6Df1tj-xoW5-0wfSDeTiKbCNyjeo2DlFySEfbtOgYlJwT8zuSP62zoMqyhz4NQzQfQPAg6WTiGRq05A6_z18rcUelv72xTAQx0h6HyMNaUFXVeRlrXJucaVCLowwldbm_BkRmOE7mgLwiq_qDCD3ryu93FAIASdlQTJnmEE3v997B=w1334-h1778-no?authuser=1",
+    "https://lh3.googleusercontent.com/SK44G6dsTvNe5vntQNpvumqkpNnwYEfuPrzCZKY9g94twaKXPWgkv8UjVPBciiHnSFlsmsDmEhGtslr4dxFY75kn7XPN3L42Hox4VESoXyKtYAyQk-KMhXccqJR5DV98uxp3viszL1hJ1aFU332-aoZfoMvbA2DG-BKqG9YmxrT99BWtgi_d-J-ifE2FewausGqW-cMHC_yFeVqks_DH4VWUtr4ojjN1FzSXDY14yH9dTgp9e7iAhiAit_IeHr_4Q77DfKUI0ohJZh2ZKJgOsV12aA6MTAG54pUY4BWrKJuZmZBhJkAFe9Zado71gZxQyA9p3Gyf_kKL2DfV8eFAg1tdZPZ6m41aadXD7op8rfOBYvJg-SZ_B6f6lwwSHBA-e1KAvGZX_RMpBuLRGbXFTJGGmkCzQcB-T2hVcDTOUmzwOAHCX0vEf7yUjqOv2OqLHlmSxwqYy-F6tHlTN-5yZeu7W2vIq4lGigWH8ZyPyiaIlWiluel-p1dEEDrraWNLMDuMWm3-9TsVwdaLnNp0l1r7bWnfLFxkz4CZGHlVbv0FFfaBXNDy0MntZ3yN4V0j8J_bB-l0gMGZH2rxJaPc_ImzE-TbW0LR0mF2ESRVwHOuDJUmU3METZvXs61K1dfVmrAEh4LOQQCiSl8IJWDUFbj5VEZkN9nq3xVeP6tkAjsQ462U9lDP7G0ehV1-4SXumgHjmS5pYGyuGGjar8GQPQg=w1334-h1778-no?authuser=1",
+    "https://lh3.googleusercontent.com/ZofY6824CcyFE5WZj7M6vJSLr8ygyKurS3BvxhIrKoPzO2IWVEwddgiqeBhs5cIdogelWxjdnkXGZwVQPB-BstdT2hHRlOMqp0OFKrRmA157qjfPPQYbNdDf56iDxprOX01AOUcq38iCEyEKyRv1NmujNzwANt_hf54g3H_EmR795QPm_mDp89Zutden35dsxE2YBzvmqd7rRIF5HG7btrzAmFmdlBwNEKIRBOkKCGxHaWDJv5C6qVtQn0xC_OjuwXAMPFPMOWdQmyl0QIdj-5S1VHNFm6jGExIHVUQqVTXVnhJ2zLtdSj4iWK9GTZdvA-IMCjoD_uPf7_z1LBTQAya5zu0EUxYHQI56duVBX3gTQETdB633i30MpCkQJrosmJhgY0z6ZRQCtURpOhIFfM8xUHu0rVlzeVezlOnM5q8tUdl-rXYFXm4HV4DBYc9h0l_raoUtFgOPnSsTWS0_YcT1Cw_NzsJfaLTClRrwztUp9R6CAf6JYbdVuBwQSdhDOXktj1O-dzzot-y3Z0Pb7ADSaFgTzsdJRwFVB4chqcosW08buuWrTjfpNycu_0lMvWEjqObCF1mZ4p-0az-j1uWsr5fJY4hOQf8NqbkqHV6RlNWFu11zViTE4tacLjfODXmqQ0BYlrIHm8Y2zUWx3dRL_zL-HCFeulVL8E1i_-5aL2DDeZVse33t45_qUXsdGdf62ZC-0g4OfvZy67RiWZRb=w1334-h1778-no?authuser=1",
+    "https://lh3.googleusercontent.com/iPRW85UKzeohQv5iVa_ate8FIgwQHNZBDvjUajvt4xZIyG2f444kYIGG37Qs140AYioOKQH_BqnvNEPVfIKrmeg9BFgqCXTR-abJzTiyuIGaX6P9CTD-NFTBkvLl8T8zdPV4qhBhYSqP34Zf7W_2rEC7KgKsiOw5jAOnwmycYpPoIklLaYY4M2-aa_5iSCmHMmB-2WOiWd3TU7cRllco2h3J-H391pI8KDUs5oKRCslfHXn00_1hbIejshhG8-TgF1wQQqZrq9Z0rwQf5yQaHvFZCf9EIhb1E_JnDGOa95ofcfk27K-UeARlPCN8w311vB6xVnDZoSMnMKyezRCelSQ0j-97KPSoimLunhaiL8qk4SU3PwZUNBPhQ2hjt30xXqbv8wRppVZeJNYBWb_rZWutev0C-5vOZbh6gfQDAozL2rE-Q0T5CTKpye_lSsXyv4GLFbntWW3g-mg3sUXDI5oo_yP5h_mzW-qPZUp9AukrD7ZvCMDNieH9_Yshx2uCAt5Utal6nBcWTCHf7wao54hnmqhZ3KaJcvThtXC88a0GvKoyiX_bCEiZK9lxRJnyQcS99PNbSoT774ytRQlxf4-co4c7nloQpuctLMbLvdS_LoHWxnaE298D2kVN4JXny57C23-F_ZL9RwGpVvc4nGoivMbWb4Q92ccTSPr3d6im1tt_3oAgfKrCF2e_euqC6Qlu07sWULly25HyH2l7tBOY=w1334-h1778-no?authuser=1"];
+    
+    var text_array=    
+   ["Danya Shah",
+    "Anjali Shah",
+    "Ronak Shah",
+    "Cosmo"];
+    var o = 0;
+    var y = 0;
+    
+    function next() { 
+    
+    if(o == 4) {
+    o=0;
+    };
+    
+    document.getElementById("family_img").src = img_array[o];
+    o++;
+    
+    if(y == 4){
+    y=0; 
+    }; 
+    
+    document.getElementById("family_text").innerHTML=text_array[y]; 
+    y++;
+    
+    };
     </script>
-</html>
+    
+    
+    </body>
+    </html>
